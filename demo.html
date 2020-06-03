@@ -1,0 +1,365 @@
+<!DOCTYPE html> <!--Tipo de documento HTML en HTML5-->
+<html>
+<head> <!--elementos no visuales-->
+	<title>Web page description</title>
+
+  <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
+
+  <link rel="stylesheet" href="demo.css">
+
+</head>
+<body> <!--Elementos visuales estruturados-->
+	<!--párrafos y formatos de texto-->
+	<p>This is regular text </p> 
+	<br/> <!--line break-->
+    <p><b> bold text </b></p>
+    <p><big> big text </big></p>
+    <p><i> italic text </i></p>
+    <p><small> small text </small></p>
+    <p><strong> strong text </strong></p>
+    <p><sub> subscripted text </sub></p>
+    <p><sup> superscripted text </sup></p>
+    <p><ins> inserted text </ins></p>
+    <p><del> deleted text </del></p>
+
+    <!--niveles de encabezados-->
+      <h1>This is heading 1</h1>
+      <h2>This is heading 2</h2>
+      <h3>This is heading 3</h3>
+      <h4>This is heading 4</h4>
+      <h5>This is heading 5</h5>
+      <h6>This is heading 6</h6>
+      <hr /> <!--se crea una linea horizaontal-->
+      <hr width="50px" /> 
+      <hr width="50%" />
+
+      <p align="center"> This text is aligned to center </p>
+      <p align="center">This is a text <br />
+         <hr width="10%" align="right" /> This is also a text.
+      </p>
+
+    <p align="center">
+   		This is a text.
+   		<hr width="50%" align="left" />
+	</p>
+
+	<!--insert an image src tmbn se puede usar para añadir la url de la imagen-->
+	<img src="image.jpg" height="150px" width="150px" border="1px"  alt="No image" /> <br/>
+
+	<!--links-->
+	<a href="https://www.google.com"> Presiona aquí </a> <br/>
+	<a href="http://www.sololearn.com" target="_blank"> Learn Playing </a> <!--abrir en una nueva pestaña-->
+
+	<!--listas ordenadas numeros-->
+	<ol>
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Green</li>
+    </ol>  
+    <!--listas desordenadas bullets-->
+    <ul>
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Green</li>
+    </ul>  
+
+    <!--tablas--> 
+    <table border="2" align="center"> <!--tablas definicion--> 
+   	<tr> <!--tablas filas--> 
+      <td bgcolor="red">red</td> <!--tablas columnas--> 
+      <td>blue</td>
+      <td>green</td>
+   	</tr>
+   	<tr>
+      <td>yellow</td>
+      <td colspan="2">orange</td> <!--unir celdas filas / para unir columnas es rowspan-->
+    </tr>
+	</table>
+
+<h1><span>My Coding Schedule</span></h1>
+<table>
+<tr> <!--cabeceras de la tabla-->
+  <th>Day</th>
+  <th>Mon</th>
+  <th>Tue</th>
+  <th>Wed</th>
+  <th>Thu</th>
+  <th>Fri</th>
+</tr>
+<tr>
+  <td>8-8:30</td>
+  <td class="selected">Learn</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>9-10</td>
+  <td></td>
+  <td class="selected">Practice</td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>1-1:30</td>
+  <td></td>
+  <td></td>
+  <td class="selected">Play</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>3:45-5</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="selected">Code</td>
+  <td></td>
+</tr>
+<tr>
+  <td>6-6:15</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="selected">Discuss</td>
+</tr>
+</table>
+
+<!--Block level elements start from a new line.
+For example: <h1>, <form>, <li>, <ol>, <ul>, <p>, <pre>, <table>, <div>, etc.
+
+Inline elements are normally displayed without line breaks.
+For example: <b>, <a>, <strong>, <img>, <input>, <em>, <span>, etc.
+-->
+
+<!--The <div> element defines a block-level section in a document.
+	The <span> element defines an inline section in a document.-->
+
+<h1>Headline</h1>
+<div style="background-color:green; color:white; padding:20px;"> <!--elemento para contener otros elementos-->
+	<p>Some paragraph text goes here.</p>
+	<p>Another paragraph goes here.</p>
+</div>
+
+<h2>Some <span style="color:red">Important</span>Message</h2> <!-- style parts of the text-->
+
+<!-- another elements
+APPLET - embedded Java applet
+IFRAME - Inline frame
+INS - inserted text
+MAP - image map
+OBJECT - embedded object
+SCRIPT - script within an HTML documen
+-->
+
+
+<!-- form elemnt recolectar info del usuario-->
+<!--action attribute to point to a webpage that will load after the user submits the form.-->
+<form action="" method="GET">
+   <input type="text" name="username" /><br />
+   <input type="password" name="password" /><br/>
+   <input type="radio" name="gender" value="male" /> Male <br />
+   <input type="radio" name="gender" value="female" /> Female <br />
+   <input type="checkbox" name="gender" value="1" /> Male <br />
+   <input type="checkbox" name="gender" value="2" /> Female <br />
+   <input type="submit" value="Submit" /> 
+</form>
+
+<h1><span>Contact Me</span></h1>
+<form>
+  <input name="name" type="text" /><br/>
+  <input name="email" type="email" /><br/>
+  <textarea name="message"></textarea>
+  <input type="submit" value="SEND" class="submit" />
+</form>
+
+<!--bgcolor="#000099" background color
+	<font color="#FFFFFF"> White headline </font> color de la letra
+-->
+
+<frameset cols="25%,50%,25%">
+   <frame src="a.htm" />
+   <frame src="b.htm" />
+   <frame src="c.htm" />
+   <noframes>Frames not supported!</noframes>
+</frameset>
+
+<div class="section">
+  <h1><span>My Media</span></h1>
+  <iframe height="150" width="300" src="https://www.youtube.com/embed/Q6_5InVJZ88" allowfullscreen frameborder="0"></iframe>
+</div>
+
+<!-------------------------------------------------------------------------------------------------------------------->
+<!-----------------------------------------------------HTML5---------------------------------------------------------->
+
+<!--
+      Content Models
+
+      Metadata: Content that sets up the presentation or behavior of the rest of the content. These elements are found in the head of the document.
+      Elements: <base>, <link>, <meta>, <noscript>, <script>, <style>, <title>
+
+      Embedded: Content that imports other resources into the document.
+      Elements: <audio>, <video>, <canvas>, <iframe>, <img>, <math>, <object>, <svg>
+
+      Interactive: Content specifically intended for user interaction.
+      Elements: <a>, <audio>, <video>, <button>, <details>, <embed>, <iframe>, <img>, <input>, <label>, <object>, <select>, <textarea>
+
+      Heading: Defines a section header.
+      Elements: <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <hgroup>
+
+      Phrasing: This model has a number of inline level elements in common with HTML4.
+      Elements: <img>, <span>, <strong>, <label>, <br />, <small>, <sub>, and more.
+-->
+    <header>
+        <h1> Most important heading </h1>
+        <h3> Less important heading </h3>
+    </header>
+
+    <nav>
+       <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About us</a></li>
+       </ul>
+    </nav>
+
+    <article> <!--Parecido al div de HTML4-->
+        <h1> El título del artículo </h1>
+        <p> Contenido del elemento del artículo </p>
+     </article>
+
+    <article> 
+       <h1> Bienvenido </h1> 
+       <section> 
+          <h1> Encabezado </h1> 
+          <p> contenido o imagen </p>    
+       </section> 
+    </article>
+
+    <article> 
+      <h1> Regalos para todos </h1> 
+      <p> Este sitio web será el mejor lugar para elegir regalos </p> 
+      <aside> 
+        <p> Los regalos se le entregarán dentro de las 24 horas </p>    
+      </aside> 
+    </article>
+
+<!---audio/video both are the same-->
+    <audio src="audio.mp3" controls>
+       Audio element not supported by your browser
+    </audio>
+    <audio controls>
+       <source src="audio.mp3" type="audio/mpeg">
+       <source src="audio.ogg" type="audio/ogg">
+    </audio>
+
+<br/>
+
+Status: <progress min="0" max="100" value="35"> </progress>
+
+
+  <div id="box" ondrop="drop(event)"
+   ondragover="allowDrop(event)"
+   style="border:1px solid black; 
+   width:200px; height:200px">
+  </div>
+
+  <img id="image" src="image.jpg" draggable="true"
+  ondragstart="drag(event)" width="150" height="50" alt="" />
+
+  <svg width = "2000" height = "2000"> 
+    <circle cx = "80" cy = "80" r = "50" fill = "green" /> 
+  </svg>
+
+  <svg width = "2000" height = "2000"> 
+    <rect width = "300" height = "100" 
+     x = "20" y = "20" fill = "green" /> 
+  </svg>
+
+  <svg width="400" height="410">
+    <line x1="10" y1="10" x2="200" y2="100" 
+        style="stroke:#000000; stroke-linecap:round; 
+        stroke-width:20"  />
+  </svg>
+
+  <svg width="2000" height="500">
+    <polyline style="stroke-linejoin:miter; stroke:black; 
+        stroke-width:12; fill: none;"
+        points="100 100, 150 150, 200 100" />
+  </svg>
+
+
+  <svg width="1000" height="250">
+  <rect width="150" height="150" fill="orange">
+    <animate attributeName="x" from="0" to="300"
+      dur="3s" fill="freeze" repeatCount="2"/> 
+  </rect>
+  </svg>
+
+  <script>
+    var canvas = document.getElementById('canvas1');
+    ctx =canvas.getContext('2d');
+    ctx.font="bold 22px Tahoma";
+    ctx.textAlign="start";
+    ctx.fillText("start", 10, 30);
+    ctx.translate(100, 150);
+    ctx.fillText("after translate", 0, 0);
+    ctx.rotate(1);
+    ctx.fillText("after rotate", 0, 0);
+    ctx.scale(1.5, 4);
+    ctx.fillText("after scale", 0,20);
+  </script>
+
+  <form>
+     <label for="email">Your e-mail address: </label> 
+     <input type="text" name="email" placeholder="email@example.com" /> 
+  </form>
+
+  <form>
+     <label for="email">Your e-mail address: </label> 
+     <input type="text" name="email" autofocus/> <!--el curso se autoenfoca-->
+  </form>
+
+  <form autocomplete="off">
+     <label for="e-mail">Your e-mail address: </label>
+     <input name="Email" type="text" required />
+     <input type="submit" value="Submit"/>  
+  </form>
+
+  <input id="mysearch" name="searchitem" type="search" />
+
+  <input id="car" type="text" list="colors" />
+  <datalist id="colors">
+     <option value="Red">
+     <option value="Green">
+     <option value="Yellow">
+  </datalist>
+
+  <input id="email" name="email" type="email" placeholder="example@example.com" />
+  <br />
+  <input id="url" name="url" type="url" placeholder="example.com" />
+  <br />
+  <input id="tel" name="tel" type="tel" placeholder="555.555.1211" />
+
+
+
+
+</body>
+</html>

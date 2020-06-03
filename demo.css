@@ -1,0 +1,304 @@
+
+/* <link rel="stylesheet" href="example.css"> en HTML en HEAD
+
+p {
+   color:white;
+   background-color:gray;
+}
+
+p {
+   color: red;
+   font-size:130%;
+} */
+
+/*-------------------ID-------------------------------*/
+#intro {
+   color: white;
+   background-color: gray;
+}
+/*-------------------CLASS------------------------------*/
+.first {font-size: 200%;}
+
+/*--------------------ID+CLASS--------------------------------*/
+#intro .first em {
+   color: pink; 
+   background-color:gray;
+}
+
+
+/*--------TIPOS DE LETRA--------------*/
+p.serif {
+   font-family: "Times New Roman", Times, serif;
+}
+p.sansserif {
+   font-family: Helvetica, Arial, sans-serif;
+}
+p.monospace {
+   font-family: "Courier New", Courier, monospace;
+}
+p.cursive {
+   font-family: Florence, cursive;
+}
+p.fantasy {
+   font-family: Blippo, fantasy;
+}
+
+/*------------TAMAÑO-------------------*/
+p.small {
+   font-size: small;
+}
+p.medium {
+   font-size: medium;
+}
+p.large {
+   font-size: large;
+}
+p.xlarge {
+   font-size: x-large;
+}
+/*----------------------------------*/
+p.italic {
+   font-style: italic;
+}
+
+
+p.normal {
+   font-style: normal;
+}
+p.italic {
+   font-style: italic;
+}
+p.oblique {
+   font-style: oblique;
+}
+
+/****************************************/
+
+p.light {   
+   font-weight: lighter;
+}
+p.bold {   
+   font-weight: bold;
+}
+p.bolder {
+   font-weight: bolder;
+}
+
+/* de 100 a 900 */
+p.light {
+   font-weight: lighter;
+}
+p.thick {
+   font-weight: bold;
+}
+p.thicker {
+   font-weight: 700;
+}
+
+
+/************************************/
+
+p.normal {
+   font-variant: normal;
+}
+p.small {
+   font-variant: small-caps;
+}
+
+/***********color*****************/
+p.example {
+   color: green;
+}
+
+h1 {
+   color: #0000FF;
+}
+p.example {
+   color: rgb(255,0,0);
+}
+
+/*******align horizontal***************/
+p.left {
+   text-align: left;
+}
+p.right {
+   text-align: right;
+}
+p.center {
+   text-align: center;
+}
+
+/********+align vertical********/
+td.top {
+   vertical-align: top;
+}
+td.middle {
+   vertical-align: middle;
+}
+td.bottom {
+   vertical-align: bottom;
+}
+
+span.baseline {
+    vertical-align: baseline;
+}
+span.sub {
+    vertical-align: sub;
+}
+span.super {
+    vertical-align: super;
+}
+span.pixel {
+    vertical-align: -10px;
+}
+
+
+.main {
+    height: 150px; width: 400px;
+    background-color: LightSkyBlue;
+    display: inline-table;
+}
+.paragraph {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+p.none {
+   text-decoration: none;
+}
+p.inherit {
+   text-decoration: inherit;
+}
+p.overline {
+   text-decoration: overline;
+}
+p.underline {
+   text-decoration: underline;
+}
+p.line-through {
+   text-decoration: line-through;
+}
+
+.ex_indent {
+   text-indent: 60px;
+}
+
+.ejem_shadow {
+   color: blue;
+   font-size: 30pt;
+   text-shadow: 5px 2px 4px grey;
+}
+
+.ex_blur{
+   font-size: 20pt;   
+   text-shadow: rgba(0,0,255,1) -1px -2px 0.5em; 
+}
+
+p.capitalize {
+   text-transform: capitalize;
+}
+
+p.uppercase {
+   text-transform: uppercase;
+}
+p.lowercase {
+   text-transform: lowercase;
+}
+
+p.normal { 
+   letter-spacing: normal; /*tmbn cambiando letter por word*/
+}
+p.positive { 
+   letter-spacing: 4px;  /*tambien -5px*/
+}
+
+
+p.ex_nowrap {
+   white-space: nowrap;
+}
+
+/**************HTML box****************/
+p.ex_border{
+   padding: 10px;    
+   border: 5px solid green;
+}
+
+div.ex_border {
+   border: 5px solid green;    
+   width: 10%; /*tambien se pueden poner minimos y maximos*/
+   height: 90px;
+}
+
+body{
+  
+  background-color: #87CEFA;
+}
+
+
+h1 {
+   background-color: rgb(135,206,235);
+}
+
+p {
+  padding: 30px;
+  background-image: url("image.jpg");
+  background-color: LightGreen;
+}
+
+/**********styling lists********/
+ol.lower-alpha {
+   list-style-type: lower-alpha;
+}
+ul.circle {
+   list-style-type: circle;
+}
+ul.square {
+   list-style-position: inside;
+}
+
+table {
+   border-collapse: separate;
+   border-spacing: 20px 40px;
+   caption-side: top;
+}
+
+.cursor{
+  cursor:help;
+}
+
+/*  
+  Display property
+  display:block;
+  display:inline;
+  display:none; no deja espacio para este elemento
+
+  visibility:visible;
+  visivility:hidden;
+  
+
+*/
+
+nav {
+   padding: 50px 0;
+   min-width: 500px; 
+}
+nav ul {
+   background: linear-gradient(90deg, 
+     rgba(255, 255, 255, 0) 0%, 
+     rgba(255, 255, 255, 0.2) 25%, 
+     rgba(255, 255, 255, 0.2) 75%, 
+     rgba(255, 255, 255, 0) 100%);
+   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+     inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+nav ul li {
+   display: inline-block;
+}
+nav ul li a {
+   padding: 10px; 
+   color: #FFFFFF;
+   font-size: 18px;
+   font-family: Arial;
+   text-decoration: none;
+   display: block;
+ }
